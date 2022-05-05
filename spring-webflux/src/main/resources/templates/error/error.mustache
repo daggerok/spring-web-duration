@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reactive Mustache Error</title>
+</head>
+<body>
+
+<h1>Reactive Mustache Error</h1>
+<div>
+  <span>{{error}}</span>:
+  <span>{{message}}</span>
+</div>
+
+<div>
+  <span>Exception {{exception}}</span>
+  <span>Occurred at: {{timestamp}}</span>
+  <span>on path: {{path}}</span>
+</div>
+
+{{!-- See: https://docs.spring.io/spring-boot/docs/current/reference/html/web.html#web.reactive.webflux.error-handling.error-pages --}}
+<!-- See: https://betacode.net/11801/spring-boot-and-mustache -->
+{{#api}}
+  <pre>Available APIs:
+    {{#entrySet}}
+      <code>{{key}} {{value}}</code>
+    {{/entrySet}}
+  </pre>
+{{/api}}
+
+</body>
+</html>

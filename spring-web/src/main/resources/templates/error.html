@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Servlet Thymeleaf Error</title>
+</head>
+<body>
+
+<h1>Servlet Thymeleaf Error</h1>
+<div>
+  <span data-th-if="${error}">[[ ${error} ]]</span>:
+  <span data-th-if="${message}">[[ ${message} ]]</span>
+</div>
+
+<div>
+  <span data-th-if="${exception}">Exception [[ ${exception} ]]</span>
+  <span data-th-if="${timestamp}">Occurred at: [[ ${timestamp} ]]</span>
+  <span data-th-if="${path}">on path: [[ ${path} ]]</span>
+</div>
+
+<pre data-th-if="${api}">Available APIs:
+  <code data-th-each="entry: ${api}">[[ ${entry.key} ]] [[ ${entry.value} ]]</code>
+</pre>
+
+</body>
+</html>
