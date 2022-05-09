@@ -1,0 +1,34 @@
+### Greet
+POST {{baseUrl}}
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "Max"
+}
+
+### Greet with 2 hours duration
+POST {{baseUrl}}
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "Max",
+  "duration": "pt2h"
+}
+
+### Greet with 7 days duration
+POST {{baseUrl}}
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "Max",
+  "duration": "p7d"
+}
+
+### Error falbacks:
+GET {{baseUrl}}
+Accept: application/json
+
+###
